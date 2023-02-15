@@ -11,7 +11,6 @@ ts.set_token(config['tushare_token'])
 pro = ts.pro_api()
 
 df = pro.query('daily', ts_code = '000002.SZ', start_date = '20090101', end_date = '20190101')
-df = df[::-1]
 print(df.head())
 
 # df.to_excel('stock-data.xlsx', index = False)
