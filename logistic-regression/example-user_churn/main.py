@@ -55,3 +55,18 @@ plt.title('ROC Curve')
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
 plt.show()
+
+# KS
+fpr, tpr, thres = roc_curve(y_test, y_test_pred_proba[:, 1])
+result = pds.DataFrame()
+result['fpr'] = list(fpr)
+result['tpr'] = list(tpr)
+result['thres'] = list(thres)
+
+plt.plot(thres[1:], tpr[1:])
+plt.plot(thres[1:], fpr[1:])
+plt.plot(thres[1:], tpr[1:] - fpr[1:])
+plt.xlabel('Threshold')
+plt.legend(['TPR', 'FPR', 'KS'])
+plt.gca().invert_xaxis()
+plt.show()
