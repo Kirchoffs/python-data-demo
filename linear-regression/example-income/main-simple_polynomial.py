@@ -1,6 +1,6 @@
 import pandas as pds
 import matplotlib.pyplot as plt
-df = pds.read_excel('IT Income.xlsx')
+df = pds.read_excel('IT-income.xlsx')
 print(df.head())
 
 X = df[['Working Years']]

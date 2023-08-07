@@ -1,5 +1,5 @@
 import pandas
-df = pandas.read_excel('Client Value.xlsx')
+df = pandas.read_excel('client-value.xlsx')
 print(df.head())
 
 X = df[['Historical Loan', 'Number of Loans', 'Education', 'Monthly Income', 'Gender']]
@@ -8,8 +8,8 @@ Y = df['Client Value']
 from sklearn.linear_model import LinearRegression
 regr = LinearRegression()
 regr.fit(X, Y)
-print(regr.coef_)
-print(regr.intercept_)
+print('Coeficient: ' + str(regr.coef_))
+print('Intercept: ' + str(regr.intercept_))
 
 import statsmodels.api as sm
 X2 = sm.add_constant(X)

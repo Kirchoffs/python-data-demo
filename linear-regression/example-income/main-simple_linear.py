@@ -1,5 +1,5 @@
 import pandas as pds
-df = pds.read_excel('IT Income.xlsx')
+df = pds.read_excel('IT-income.xlsx')
 print(df.head())
 
 X = df[['Working Years']]
