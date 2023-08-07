@@ -35,3 +35,23 @@ print(model.intercept_)
 import numpy as np
 for i in range(5):
     print(1 / (1 + np.exp(-(np.dot(X_test.iloc[i], model.coef_.T) + model.intercept_))))
+    
+# Check ROC and AUC
+from sklearn.metrics import roc_curve
+fpr, tpr, thres = roc_curve(y_test, y_test_pred_proba[:, 1])
+result = pds.DataFrame()
+result['fpr'] = list(fpr)
+result['tpr'] = list(tpr)
+result['thres'] = list(thres)
+print(result.head())
+
+from sklearn.metrics import roc_auc_score
+score = roc_auc_score(y_test, y_test_pred_proba[:, 1])
+print(score)
+
+import matplotlib.pyplot as plt
+plt.plot(fpr, tpr)
+plt.title('ROC Curve')
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.show()
