@@ -10,3 +10,8 @@ $ "H"_A (X) = S_1/(S_1 + S_2) H(X_1) + S_2/(S_1 + S_2) H(X_2) $
 
 == Information Gain
 $ "Gain"(A) = H(X) - H_A (X) $
+
+== Regression Decision Tree
+It uses MSE as the split criteria, instead of Gini or Entropy.
+
+$ "MSE" = 1/n sum(y^"(i)" - accent(y, hat)^"(i)") $
