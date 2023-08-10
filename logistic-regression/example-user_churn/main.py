@@ -1,6 +1,6 @@
 import pandas as pds
 
-df = pds.read_excel('user-churn.xlsx')
+df = pds.read_csv('user-churn.csv')
 X = df.drop(columns = 'churned account status')
 y = df['churned account status']
 

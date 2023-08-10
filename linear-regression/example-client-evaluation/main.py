@@ -1,5 +1,5 @@
 import pandas
-df = pandas.read_excel('client-value.xlsx')
+df = pandas.read_csv('client-value.csv')
 print(df.head())
 
 X = df[['Historical Loan', 'Number of Loans', 'Education', 'Monthly Income', 'Gender']]
