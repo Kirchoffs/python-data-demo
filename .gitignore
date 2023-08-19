@@ -1,4 +1,4 @@
-pure_env/
+*_env/
 **/.DS_Store
 **/.xlsx
 **/.ipynb_checkpoints
