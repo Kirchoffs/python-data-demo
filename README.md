@@ -69,6 +69,12 @@ dependencies:
 ```
 The ! at the beginning of the command is used to execute shell commands within the notebook environment.
 
+### Kernel
+```
+>> jupyter kernelspec list
+>> python3 -m ipykernel install --user --name <python-kernel-name>
+```
+
 ## Other Notes
 ### Module platform
 ```

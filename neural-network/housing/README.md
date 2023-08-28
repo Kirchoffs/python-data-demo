@@ -11,3 +11,4 @@ number of iterations = number of passes, each pass using [batch size] number of 
 ```
 >> tensorboard --logdir ./ --host localhost 
 ```
+It will scan the current directory recursively for all event files and start a TensorBoard server at http://localhost:6006.
