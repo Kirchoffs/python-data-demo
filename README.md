@@ -18,6 +18,10 @@ Miniconda is enough for most of the cases.
 ```
 
 ```
+(base) >> conda create -n py38 python=3.8
+```
+
+```
 (base) >> conda env list
 (base) >> conda env create -f tensorflow-apple-metal.yml -n tensorflow
 (base) >> conda activate tensorflow
